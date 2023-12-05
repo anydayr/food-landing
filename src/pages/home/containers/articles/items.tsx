@@ -12,6 +12,7 @@ const ArticlesItems: React.FC<IArticleItemProps> = ({
       <article className="card__article">
         <figure className="card__figure">
           <img
+            loading="lazy"
             className="card__img"
             src={image ?? ''}
             alt={title}
