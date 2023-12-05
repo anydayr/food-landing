@@ -19,13 +19,11 @@ function FormNewsLetter() {
           }}
         >
           <div className="form__grid">
-            <div>
+            <div className="input__container">
               <label
                 htmlFor="first_name"
                 style={{ display: 'flex', flexDirection: 'column' }}
-                className={
-                  errors?.firstname?.message ? 'label--error' : 'label'
-                }
+                className={'label'}
               >
                 Nombre
                 <input
@@ -35,22 +33,22 @@ function FormNewsLetter() {
                   {...register('firstname')}
                   placeholder="Nombre"
                 />
-                {errors.firstname && (
-                  <span
-                    className="helper__error"
-                    role="alert"
-                    style={{ fontSize: '12px' }}
-                  >
-                    {errors.firstname?.message}
-                  </span>
-                )}
               </label>
+              {errors.firstname && (
+                <span
+                  className="helper__error"
+                  role="alert"
+                  style={{ fontSize: '12px' }}
+                >
+                  {errors.firstname?.message}
+                </span>
+              )}
             </div>
-            <div>
+            <div className="input__container">
               <label
                 htmlFor="lastname"
                 style={{ display: 'flex', flexDirection: 'column' }}
-                className={errors?.lastname?.message ? 'label--error' : 'label'}
+                className={'label'}
               >
                 Apellido
                 <input
@@ -59,22 +57,22 @@ function FormNewsLetter() {
                   {...register('lastname')}
                   placeholder="Apellido"
                 />
-                {errors.lastname && (
-                  <span
-                    className="helper__error"
-                    role="alert"
-                    style={{ fontSize: '12px' }}
-                  >
-                    {errors.lastname?.message}
-                  </span>
-                )}
               </label>
+              {errors.lastname && (
+                <span
+                  className="helper__error"
+                  role="alert"
+                  style={{ fontSize: '12px' }}
+                >
+                  {errors.lastname?.message}
+                </span>
+              )}
             </div>
-            <div>
+            <div className="input__container">
               <label
                 htmlFor="email"
                 style={{ display: 'flex', flexDirection: 'column' }}
-                className={errors?.email?.message ? 'label--error' : 'label'}
+                className={'label'}
               >
                 Email
                 <input
@@ -84,22 +82,22 @@ function FormNewsLetter() {
                   placeholder="Email"
                   id="email"
                 />
-                {errors.email && (
-                  <span
-                    className="helper__error"
-                    role="alert"
-                    style={{ fontSize: '12px' }}
-                  >
-                    {errors.email?.message}
-                  </span>
-                )}
               </label>
+              {errors.email && (
+                <span
+                  className="helper__error"
+                  role="alert"
+                  style={{ fontSize: '12px' }}
+                >
+                  {errors.email?.message}
+                </span>
+              )}
             </div>
-            <div>
+            <div className="input__container">
               <label
                 htmlFor="phone"
                 style={{ display: 'flex', flexDirection: 'column' }}
-                className={errors?.phone?.message ? 'label--error' : 'label'}
+                className={'label'}
               >
                 Teléfono
                 <input
@@ -109,16 +107,16 @@ function FormNewsLetter() {
                   placeholder="Teléfono"
                   id="phone"
                 />
-                {errors.phone && (
-                  <span
-                    className="helper__error"
-                    role="alert"
-                    style={{ fontSize: '12px' }}
-                  >
-                    {errors.phone?.message}
-                  </span>
-                )}
               </label>
+              {errors.phone && (
+                <span
+                  className="helper__error"
+                  role="alert"
+                  style={{ fontSize: '12px' }}
+                >
+                  {errors.phone?.message}
+                </span>
+              )}
             </div>
           </div>
           <button
