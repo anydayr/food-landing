@@ -42,8 +42,12 @@ label {
 }
 
 .label--error:focus-within {
-  color: $color-error;
 }
 .label:focus-within {
-  color: $color-primary;
+  color: $color-dark;
+}
+
+.label {
+  font-weight: 600;
+  text-transform: uppercase;
 }
