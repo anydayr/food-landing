@@ -91,6 +91,12 @@
 }
 
 .input {
+  &__container {
+    text-align: left;
+  }
+}
+
+.input {
   &--error {
     border: 1px solid $color-error !important;
   }
