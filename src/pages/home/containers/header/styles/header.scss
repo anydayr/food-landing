@@ -4,13 +4,9 @@
   width: 100%;
   height: 741px;
   position: relative;
-  object-fit: contain;
-  image-rendering: auto;
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-image: url('.././../../../../assets/images/background-hero.png');
+  &__img {
+    width: 100%;
+  }
   &__title {
     top: 26.61%;
     left: 9.17%;
