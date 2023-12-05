@@ -19,73 +19,106 @@ function FormNewsLetter() {
           }}
         >
           <div className="form__grid">
-            <div style={{ display: 'flex', flexDirection: 'column' }}>
-              <input
-                className={errors.firstname ? 'input--error' : ''}
-                type="text"
-                {...register('firstname')}
-                placeholder="Nombre"
-              />
-              {errors.firstname && (
-                <span
-                  className="helper__error"
-                  role="alert"
-                  style={{ fontSize: '12px' }}
-                >
-                  {errors.firstname?.message}
-                </span>
-              )}
+            <div>
+              <label
+                htmlFor="first_name"
+                style={{ display: 'flex', flexDirection: 'column' }}
+                className={
+                  errors?.firstname?.message ? 'label--error' : 'label'
+                }
+              >
+                Nombre
+                <input
+                  id="first_name"
+                  className={errors.firstname ? 'input--error' : ''}
+                  type="text"
+                  {...register('firstname')}
+                  placeholder="Nombre"
+                />
+                {errors.firstname && (
+                  <span
+                    className="helper__error"
+                    role="alert"
+                    style={{ fontSize: '12px' }}
+                  >
+                    {errors.firstname?.message}
+                  </span>
+                )}
+              </label>
             </div>
-            <div style={{ display: 'flex', flexDirection: 'column' }}>
-              <input
-                className={errors.lastname ? 'input--error' : ''}
-                type="text"
-                {...register('lastname')}
-                placeholder="Apellido"
-              />
-              {errors.lastname && (
-                <span
-                  className="helper__error"
-                  role="alert"
-                  style={{ fontSize: '12px' }}
-                >
-                  {errors.lastname?.message}
-                </span>
-              )}
+            <div>
+              <label
+                htmlFor="lastname"
+                style={{ display: 'flex', flexDirection: 'column' }}
+                className={errors?.lastname?.message ? 'label--error' : 'label'}
+              >
+                Apellido
+                <input
+                  className={errors.lastname ? 'input--error' : ''}
+                  type="text"
+                  {...register('lastname')}
+                  placeholder="Apellido"
+                />
+                {errors.lastname && (
+                  <span
+                    className="helper__error"
+                    role="alert"
+                    style={{ fontSize: '12px' }}
+                  >
+                    {errors.lastname?.message}
+                  </span>
+                )}
+              </label>
             </div>
-            <div style={{ display: 'flex', flexDirection: 'column' }}>
-              <input
-                className={errors.email ? 'input--error' : ''}
-                type="email"
-                {...register('email')}
-                placeholder="Email"
-              />
-              {errors.email && (
-                <span
-                  className="helper__error"
-                  role="alert"
-                  style={{ fontSize: '12px' }}
-                >
-                  {errors.email?.message}
-                </span>
-              )}
+            <div>
+              <label
+                htmlFor="email"
+                style={{ display: 'flex', flexDirection: 'column' }}
+                className={errors?.email?.message ? 'label--error' : 'label'}
+              >
+                Email
+                <input
+                  className={errors.email ? 'input--error' : ''}
+                  type="email"
+                  {...register('email')}
+                  placeholder="Email"
+                  id="email"
+                />
+                {errors.email && (
+                  <span
+                    className="helper__error"
+                    role="alert"
+                    style={{ fontSize: '12px' }}
+                  >
+                    {errors.email?.message}
+                  </span>
+                )}
+              </label>
             </div>
-            <div style={{ display: 'flex', flexDirection: 'column' }}>
-              <input
-                className={errors.phone ? 'input--error' : ''}
-                type="text"
-                {...register('phone')}
-                placeholder="Teléfono"
-              />
-              {errors.phone && (
-                <span
-                  className="helper__error"
-                  role="alert"
-                  style={{ fontSize: '12px' }}
-                >
-                  {errors.phone?.message}
-                </span>
-              )}
+            <div>
+              <label
+                htmlFor="phone"
+                style={{ display: 'flex', flexDirection: 'column' }}
+                className={errors?.phone?.message ? 'label--error' : 'label'}
+              >
+                Teléfono
+                <input
+                  className={errors.phone ? 'input--error' : ''}
+                  type="text"
+                  {...register('phone')}
+                  placeholder="Teléfono"
+                  id="phone"
+                />
+                {errors.phone && (
+                  <span
+                    className="helper__error"
+                    role="alert"
+                    style={{ fontSize: '12px' }}
+                  >
+                    {errors.phone?.message}
+                  </span>
+                )}
+              </label>
             </div>
           </div>
           <button

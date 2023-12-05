@@ -1,8 +1,8 @@
-/*Fonts*/
-
 @import './fonts.scss';
 @import './colors.scss';
-
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 :root {
   font-family: $font-secondary;
   line-height: $line-height;
@@ -35,4 +35,15 @@ input[type='number']::-webkit-inner-spin-button,
 input[type='number']::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+label {
+  text-align: left;
+}
+
+.label--error:focus-within {
+  color: $color-error;
+}
+.label:focus-within {
+  color: $color-primary;
 }
