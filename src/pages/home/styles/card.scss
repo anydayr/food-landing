@@ -7,14 +7,14 @@
       &__title {
         color: $color-primary;
       }
-      &__link {
-        color: $color-primary !important;
-      }
     }
   }
   &__link {
     text-decoration: none;
     color: $color-dark !important;
+    &:hover {
+      color: $color-primary !important;
+    }
   }
   display: flex;
   overflow: hidden;
