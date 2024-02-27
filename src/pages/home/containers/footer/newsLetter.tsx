@@ -19,13 +19,21 @@ function FormNewsLetter() {
           }}
         >
           <div className="form__grid">
-            <div style={{ display: 'flex', flexDirection: 'column' }}>
-              <input
-                className={errors.firstname ? 'input--error' : ''}
-                type="text"
-                {...register('firstname')}
-                placeholder="Nombre"
-              />
+            <div className="input__container">
+              <label
+                htmlFor="first_name"
+                style={{ display: 'flex', flexDirection: 'column' }}
+                className={'label'}
+              >
+                Nombre
+                <input
+                  id="first_name"
+                  className={errors.firstname ? 'input--error' : ''}
+                  type="text"
+                  {...register('firstname')}
+                  placeholder="Nombre"
+                />
+              </label>
               {errors.firstname && (
                 <span
                   className="helper__error"
@@ -36,13 +44,20 @@ function FormNewsLetter() {
                 </span>
               )}
             </div>
-            <div style={{ display: 'flex', flexDirection: 'column' }}>
-              <input
-                className={errors.lastname ? 'input--error' : ''}
-                type="text"
-                {...register('lastname')}
-                placeholder="Apellido"
-              />
+            <div className="input__container">
+              <label
+                htmlFor="lastname"
+                style={{ display: 'flex', flexDirection: 'column' }}
+                className={'label'}
+              >
+                Apellido
+                <input
+                  className={errors.lastname ? 'input--error' : ''}
+                  type="text"
+                  {...register('lastname')}
+                  placeholder="Apellido"
+                />
+              </label>
               {errors.lastname && (
                 <span
                   className="helper__error"
@@ -53,13 +68,21 @@ function FormNewsLetter() {
                 </span>
               )}
             </div>
-            <div style={{ display: 'flex', flexDirection: 'column' }}>
-              <input
-                className={errors.email ? 'input--error' : ''}
-                type="email"
-                {...register('email')}
-                placeholder="Email"
-              />
+            <div className="input__container">
+              <label
+                htmlFor="email"
+                style={{ display: 'flex', flexDirection: 'column' }}
+                className={'label'}
+              >
+                Email
+                <input
+                  className={errors.email ? 'input--error' : ''}
+                  type="email"
+                  {...register('email')}
+                  placeholder="Email"
+                  id="email"
+                />
+              </label>
               {errors.email && (
                 <span
                   className="helper__error"
@@ -70,13 +93,21 @@ function FormNewsLetter() {
                 </span>
               )}
             </div>
-            <div style={{ display: 'flex', flexDirection: 'column' }}>
-              <input
-                className={errors.phone ? 'input--error' : ''}
-                type="text"
-                {...register('phone')}
-                placeholder="Teléfono"
-              />
+            <div className="input__container">
+              <label
+                htmlFor="phone"
+                style={{ display: 'flex', flexDirection: 'column' }}
+                className={'label'}
+              >
+                Teléfono
+                <input
+                  className={errors.phone ? 'input--error' : ''}
+                  type="text"
+                  {...register('phone')}
+                  placeholder="Teléfono"
+                  id="phone"
+                />
+              </label>
               {errors.phone && (
                 <span
                   className="helper__error"
